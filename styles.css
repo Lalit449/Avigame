@@ -1,0 +1,106 @@
+/* General Body Style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2e2e2e; /* Dark background for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Game Container */
+.game-container {
+    width: 80%;
+    max-width: 900px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #28a745; /* Green box background */
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden; /* Hide plane outside box */
+}
+
+/* Earth map background */
+.game-container {
+    background-image: url('https://www.w3schools.com/w3images/earth.jpg'); /* Earth map image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Game Info Section */
+.game-info {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Plane Animation */
+.plane-container {
+    position: absolute;
+    top: 20px;
+    left: -150px; /* Start position off-screen to the left */
+    width: 100%;
+    height: 60px;
+    z-index: 10; /* Ensures plane is above the game box */
+}
+
+.plane {
+    width: 80px;
+    height: 40px;
+    background-image: url('https://image.shutterstock.com/image-vector/flat-style-small-airplane-icon-260nw-1064514995.jpg'); /* Plane image URL */
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    animation: flyPlane 10s linear infinite;
+}
+
+/* Animation for plane */
+@keyframes flyPlane {
+    0% {
+        left: -150px; /* Start off-screen */
+    }
+    100% {
+        left: 100%; /* Fly off the right side */
+    }
+}
+
+/* Status and Auto Cashout Section */
+.status {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.auto-cashout-section {
+    margin-top: 20px;
+}
+
+.auto-cashout-section input {
+    padding: 5px;
+    font-size: 16px;
+    width: 60px;
+}
+
+.auto-cashout-section button {
+    background-color: #28a745;
+}
+
+#cashoutStatus {
+    color: #ffd700; /* Gold color for status */
+}
